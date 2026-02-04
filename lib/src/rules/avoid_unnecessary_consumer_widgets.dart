@@ -48,7 +48,10 @@ class _Visitor extends SimpleAstVisitor<void> {
     }
 
     // Find build method
-    final buildMethod = cls.members
+    final body = cls.body;
+    if (body is! BlockClassBody) return;
+
+    final buildMethod = body.members
         .whereType<MethodDeclaration>()
         .firstWhereOrNull((m) => m.name.lexeme == 'build');
 
@@ -65,7 +68,7 @@ class _Visitor extends SimpleAstVisitor<void> {
     final refUsed = _isIdentifierUsed(buildMethod.body, 'ref');
 
     if (!refUsed) {
-      rule.reportAtToken(cls.name);
+      rule.reportAtToken(cls.namePart.typeName);
     }
   }
 

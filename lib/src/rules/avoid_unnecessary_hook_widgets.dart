@@ -55,7 +55,10 @@ class _Visitor extends SimpleAstVisitor<void> {
 
     if (!_hookWidgetChecker.isExactly(superclassElement)) return;
 
-    final buildMethod = node.members
+    final body = node.body;
+    if (body is! BlockClassBody) return;
+
+    final buildMethod = body.members
         .whereType<MethodDeclaration>()
         .firstWhereOrNull((member) => member.name.lexeme == 'build');
     if (buildMethod == null) return;

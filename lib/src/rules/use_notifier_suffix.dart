@@ -50,9 +50,10 @@ class _Visitor extends SimpleAstVisitor<void> {
     final element = node.declaredFragment?.element;
     if (element == null) return;
 
+    final name = node.namePart.typeName;
     if (_notifierChecker.isSuperOf(element) &&
-        !node.name.lexeme.endsWith('Notifier')) {
-      rule.reportAtToken(node.name, arguments: [node.name.lexeme]);
+        !name.lexeme.endsWith('Notifier')) {
+      rule.reportAtToken(name, arguments: [name.lexeme]);
     }
   }
 }

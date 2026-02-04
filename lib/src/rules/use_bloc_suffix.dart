@@ -46,8 +46,9 @@ class _Visitor extends SimpleAstVisitor<void> {
     final element = node.declaredFragment?.element;
     if (element == null) return;
 
-    if (_blocChecker.isSuperOf(element) && !node.name.lexeme.endsWith('Bloc')) {
-      rule.reportAtToken(node.name, arguments: [node.name.lexeme]);
+    final name = node.namePart.typeName;
+    if (_blocChecker.isSuperOf(element) && !name.lexeme.endsWith('Bloc')) {
+      rule.reportAtToken(name, arguments: [name.lexeme]);
     }
   }
 }

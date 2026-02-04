@@ -49,9 +49,9 @@ class _Visitor extends SimpleAstVisitor<void> {
     final element = node.declaredFragment?.element;
     if (element == null) return;
 
-    if (_cubitChecker.isSuperOf(element) &&
-        !node.name.lexeme.endsWith('Cubit')) {
-      rule.reportAtToken(node.name, arguments: [node.name.lexeme]);
+    final name = node.namePart.typeName;
+    if (_cubitChecker.isSuperOf(element) && !name.lexeme.endsWith('Cubit')) {
+      rule.reportAtToken(name, arguments: [name.lexeme]);
     }
   }
 }
