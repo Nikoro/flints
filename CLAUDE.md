@@ -15,7 +15,8 @@ dart format .             # Format code
 
 ```
 lib/
-  main.dart               # Plugin entry point - registers all rules, fixes, and assists
+  main.dart               # Re-exports many_lints.dart for analysis_server_plugin discovery
+  many_lints.dart         # Plugin entry point - registers all rules, fixes, and assists
   src/
     type_checker.dart     # Type matching utilities for analyzer
     rules/                # Lint rules (AnalysisRule + SimpleAstVisitor pattern)

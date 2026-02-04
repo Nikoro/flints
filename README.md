@@ -26,7 +26,7 @@ This package provides a set of custom lints to help you write better Flutter cod
 
 > **Requires Dart 3.10+ (Flutter 3.38+)**
 
-Add `many_lints` to the top-level `plugins` section in your `analysis_options.yaml` file:
+Add `many_lints` to the **top-level** `plugins` section in your `analysis_options.yaml` file (NOT under `analyzer:`):
 
 ```yaml
 plugins:
