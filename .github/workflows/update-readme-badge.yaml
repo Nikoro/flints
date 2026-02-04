@@ -1,0 +1,45 @@
+name: Update README Badge
+
+on:
+  push:
+    paths:
+      - 'pubspec.yaml'
+    branches:
+      - main
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dart-lang/setup-dart@v1
+
+      - name: Install dependencies
+        run: dart pub get
+
+      - name: Extract analyzer version from pubspec.lock and update README
+        run: |
+          # Extract the version line that comes after "analyzer:" block in pubspec.lock
+          VERSION=$(awk '/^  analyzer:/{found=1} found && /version:/{print $2; exit}' pubspec.lock | tr -d '"')
+          echo "Detected analyzer version: $VERSION"
+          
+          # Update the badge URL
+          sed -i "s|analyzer-[0-9.]*-blue|analyzer-${VERSION}-blue|g" README.md
+          
+          # Update the alt text
+          sed -i "s|analyzer version [0-9.]*|analyzer version ${VERSION}|g" README.md
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --quiet README.md || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add README.md
+          git commit -m "chore: update analyzer version badge"
+          git push

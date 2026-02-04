@@ -11,6 +11,9 @@
   <a href="https://opensource.org/licenses/MIT">
     <img alt="MIT License" src="https://tinyurl.com/3uf9tzpy">
   </a>
+  <a href="https://pub.dev/packages/analyzer">
+    <img src="https://img.shields.io/badge/analyzer-10.0.2-blue" alt="analyzer version 10.0.2">
+  </a>
 </p>
 
 A useful collection of custom lints for Flutter & Dart projects. Uses the new `analysis_server_plugin` system for direct integration with `dart analyze` and IDEs.
