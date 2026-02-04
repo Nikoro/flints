@@ -1,5 +1,5 @@
 format: ## Checks code formatting
-  script: dart format .
+  script: dart format . ...args
 
 analyze: ## Performs static analysis
   script: dart analyze
