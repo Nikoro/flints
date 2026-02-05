@@ -5,17 +5,28 @@ import 'package:analyzer/dart/element/type.dart';
 ///
 /// This is a simplified replacement for `TypeChecker` from custom_lint_builder.
 class TypeChecker {
+  /// Creates a type checker that matches a type by its name and package.
+  ///
+  /// Use this when checking for types from external packages.
+  /// Example: `TypeChecker.fromName('Widget', packageName: 'flutter')`
   const TypeChecker.fromName(this._name, {required String packageName})
     : _packageName = packageName,
       _url = null,
       _checkers = null;
 
+  /// Creates a type checker that matches a type by its full URL.
+  ///
+  /// Use this for dart: core types or when you need precise matching.
+  /// Example: `TypeChecker.fromUrl('dart:core#Iterable')`
   const TypeChecker.fromUrl(String url)
     : _url = url,
       _name = null,
       _packageName = null,
       _checkers = null;
 
+  /// Creates a type checker that matches if any of the given checkers match.
+  ///
+  /// Useful for checking against multiple possible types.
   const TypeChecker.any(this._checkers)
     : _name = null,
       _packageName = null,

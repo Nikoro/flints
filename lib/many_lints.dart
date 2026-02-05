@@ -1,3 +1,26 @@
+/// Many Lints - A collection of useful lint rules for Dart and Flutter.
+///
+/// This package provides custom lint rules, quick fixes, and code assists
+/// that integrate with the Dart analyzer and IDEs.
+///
+/// ## Usage
+///
+/// Add `many_lints` to your `pubspec.yaml`:
+///
+/// ```yaml
+/// dev_dependencies:
+///   many_lints: ^0.1.0
+/// ```
+///
+/// Then enable the plugin in your `analysis_options.yaml`:
+///
+/// ```yaml
+/// analyzer:
+///   plugins:
+///     - many_lints
+/// ```
+library;
+
 import 'package:analysis_server_plugin/plugin.dart';
 import 'package:analysis_server_plugin/registry.dart';
 

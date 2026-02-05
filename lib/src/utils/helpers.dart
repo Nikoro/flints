@@ -61,8 +61,11 @@ Expression? maybeGetSingleReturnExpression(FunctionBody body) {
   };
 }
 
-/// Extension for Iterable to add firstWhereOrNull.
+/// Extension on [Iterable] providing additional utility methods.
 extension IterableExtension<T> on Iterable<T> {
+  /// Returns the first element satisfying [test], or `null` if none found.
+  ///
+  /// Unlike [Iterable.firstWhere], this does not throw if no element matches.
   T? firstWhereOrNull(bool Function(T) test) {
     for (final element in this) {
       if (test(element)) return element;
