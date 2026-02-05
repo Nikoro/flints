@@ -7,8 +7,8 @@ import 'package:analyzer_plugin/utilities/change_builder/change_builder_core.dar
 import 'package:many_lints/src/type_checker.dart';
 import 'package:many_lints/src/utils/helpers.dart';
 
-/// Converts an iterable call to [Iterable.map] with an optional
-/// collect [Iterable.toList]/[Iterable.toSet] to a collection-for idiom.
+/// Converts an iterable call to `Iterable.map` with an optional
+/// collect `Iterable.toList`/`Iterable.toSet` to a collection-for idiom.
 ///
 /// **Example**:
 ///
