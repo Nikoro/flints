@@ -30,7 +30,7 @@ class Padding extends Widget {
     super.setUp();
   }
 
-  Future<void> test_containerWithOnlyMargin() async {
+  Future<void> test_container_with_only_margin() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -42,7 +42,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_containerWithMarginAndChild() async {
+  Future<void> test_container_with_margin_and_child() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -54,7 +54,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_containerWithMarginAndKey() async {
+  Future<void> test_container_with_margin_and_key() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -66,7 +66,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_containerWithMultipleParams() async {
+  Future<void> test_container_with_multiple_params() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {
@@ -75,7 +75,7 @@ Widget f() {
 ''');
   }
 
-  Future<void> test_containerWithNoMargin() async {
+  Future<void> test_container_with_no_margin() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {

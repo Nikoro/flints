@@ -1,0 +1,6 @@
+include: ../analysis_options.yaml
+
+linter:
+  rules:
+    # test_reflective_loader requires test_ prefix naming convention
+    non_constant_identifier_names: false

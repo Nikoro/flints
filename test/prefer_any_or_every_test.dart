@@ -15,7 +15,7 @@ class PreferAnyOrEveryTest extends AnalysisRuleTest {
     super.setUp();
   }
 
-  Future<void> test_whereIsEmpty() async {
+  Future<void> test_where_is_empty() async {
     await assertDiagnostics(
       r'''
 void f() {
@@ -27,7 +27,7 @@ void f() {
     );
   }
 
-  Future<void> test_whereIsNotEmpty() async {
+  Future<void> test_where_is_not_empty() async {
     await assertDiagnostics(
       r'''
 void f() {
@@ -71,7 +71,7 @@ void f() {
     );
   }
 
-  Future<void> test_whereWithLength() async {
+  Future<void> test_where_with_length() async {
     await assertNoDiagnostics(r'''
 void f() {
   final list = [1, 2, 3];

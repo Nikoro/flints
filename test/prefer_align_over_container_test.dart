@@ -36,7 +36,7 @@ class EdgeInsets {
     super.setUp();
   }
 
-  Future<void> test_containerWithOnlyAlignment() async {
+  Future<void> test_container_with_only_alignment() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -48,7 +48,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_containerWithAlignmentAndChild() async {
+  Future<void> test_container_with_alignment_and_child() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -60,7 +60,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_containerWithAlignmentAndKey() async {
+  Future<void> test_container_with_alignment_and_key() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -72,7 +72,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_containerWithMultipleParams() async {
+  Future<void> test_container_with_multiple_params() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {
@@ -81,7 +81,7 @@ Widget f() {
 ''');
   }
 
-  Future<void> test_containerWithNoAlignment() async {
+  Future<void> test_container_with_no_alignment() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {

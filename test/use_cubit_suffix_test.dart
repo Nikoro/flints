@@ -17,7 +17,7 @@ class Cubit<State> {}
     super.setUp();
   }
 
-  Future<void> test_missingCubitSuffix() async {
+  Future<void> test_missing_cubit_suffix() async {
     await assertDiagnostics(
       r'''
 import 'package:bloc/bloc.dart';
@@ -27,14 +27,14 @@ class Counter extends Cubit<int> {}
     );
   }
 
-  Future<void> test_hasCubitSuffix() async {
+  Future<void> test_has_cubit_suffix() async {
     await assertNoDiagnostics(r'''
 import 'package:bloc/bloc.dart';
 class CounterCubit extends Cubit<int> {}
 ''');
   }
 
-  Future<void> test_notACubit() async {
+  Future<void> test_not_a_cubit() async {
     await assertNoDiagnostics(r'''
 class Counter {}
 ''');

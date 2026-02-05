@@ -30,7 +30,7 @@ class ConsumerWidget extends Widget {
     super.setUp();
   }
 
-  Future<void> test_consumerWidgetWithoutRef() async {
+  Future<void> test_consumer_widget_without_ref() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -46,7 +46,7 @@ class MyWidget extends ConsumerWidget {
     );
   }
 
-  Future<void> test_consumerWidgetWithRef() async {
+  Future<void> test_consumer_widget_with_ref() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -60,7 +60,7 @@ class MyWidget extends ConsumerWidget {
 ''');
   }
 
-  Future<void> test_statelessWidget() async {
+  Future<void> test_stateless_widget() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 class MyWidget extends StatelessWidget {

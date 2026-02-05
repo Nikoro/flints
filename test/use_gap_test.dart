@@ -63,7 +63,7 @@ class Gap extends Widget {
 
   // === SizedBox cases ===
 
-  Future<void> test_sizedBoxHeightInColumn() async {
+  Future<void> test_sized_box_height_in_column() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -75,7 +75,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_sizedBoxWidthInRow() async {
+  Future<void> test_sized_box_width_in_row() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -87,7 +87,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_constSizedBoxInColumn() async {
+  Future<void> test_const_sized_box_in_column() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -99,7 +99,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_sizedBoxInWrap() async {
+  Future<void> test_sized_box_in_wrap() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -111,7 +111,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_sizedBoxInListView() async {
+  Future<void> test_sized_box_in_list_view() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -125,7 +125,7 @@ Widget f() {
 
   // === SizedBox negative cases ===
 
-  Future<void> test_sizedBoxWithBothDimensions() async {
+  Future<void> test_sized_box_with_both_dimensions() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {
@@ -134,7 +134,7 @@ Widget f() {
 ''');
   }
 
-  Future<void> test_sizedBoxWithChild() async {
+  Future<void> test_sized_box_with_child() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {
@@ -143,7 +143,7 @@ Widget f() {
 ''');
   }
 
-  Future<void> test_sizedBoxOutsideMultiChild() async {
+  Future<void> test_sized_box_outside_multi_child() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {
@@ -152,7 +152,7 @@ Widget f() {
 ''');
   }
 
-  Future<void> test_sizedBoxWidthInColumn() async {
+  Future<void> test_sized_box_width_in_column() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {
@@ -161,7 +161,7 @@ Widget f() {
 ''');
   }
 
-  Future<void> test_sizedBoxHeightInRow() async {
+  Future<void> test_sized_box_height_in_row() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {
@@ -172,7 +172,7 @@ Widget f() {
 
   // === Padding cases ===
 
-  Future<void> test_paddingBottomInColumn() async {
+  Future<void> test_padding_bottom_in_column() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -184,7 +184,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_paddingTopInColumn() async {
+  Future<void> test_padding_top_in_column() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -196,7 +196,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_paddingRightInRow() async {
+  Future<void> test_padding_right_in_row() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -210,7 +210,7 @@ Widget f() {
 
   // === Padding negative cases ===
 
-  Future<void> test_paddingAllInColumn() async {
+  Future<void> test_padding_all_in_column() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {
@@ -219,7 +219,7 @@ Widget f() {
 ''');
   }
 
-  Future<void> test_paddingLeftInColumn() async {
+  Future<void> test_padding_left_in_column() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {
@@ -228,7 +228,7 @@ Widget f() {
 ''');
   }
 
-  Future<void> test_paddingMultipleDirections() async {
+  Future<void> test_padding_multiple_directions() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {
@@ -237,7 +237,7 @@ Widget f() {
 ''');
   }
 
-  Future<void> test_paddingOutsideMultiChild() async {
+  Future<void> test_padding_outside_multi_child() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {
@@ -248,7 +248,7 @@ Widget f() {
 
   // === Gap is ok ===
 
-  Future<void> test_gapInColumn() async {
+  Future<void> test_gap_in_column() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';

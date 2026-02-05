@@ -39,7 +39,7 @@ class Text extends Widget {
     super.setUp();
   }
 
-  Future<void> test_columnWithSingleChild() async {
+  Future<void> test_column_with_single_child() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -51,7 +51,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_rowWithSingleChild() async {
+  Future<void> test_row_with_single_child() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -63,7 +63,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_columnWithMultipleChildren() async {
+  Future<void> test_column_with_multiple_children() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {
@@ -72,7 +72,7 @@ Widget f() {
 ''');
   }
 
-  Future<void> test_columnWithEmptyChildren() async {
+  Future<void> test_column_with_empty_children() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {
@@ -81,7 +81,7 @@ Widget f() {
 ''');
   }
 
-  Future<void> test_columnWithSpreadElement() async {
+  Future<void> test_column_with_spread_element() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f(List<Widget> widgets) {
@@ -90,7 +90,7 @@ Widget f(List<Widget> widgets) {
 ''');
   }
 
-  Future<void> test_columnWithForElement() async {
+  Future<void> test_column_with_for_element() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {
@@ -99,7 +99,7 @@ Widget f() {
 ''');
   }
 
-  Future<void> test_wrapWithSingleChild() async {
+  Future<void> test_wrap_with_single_child() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';

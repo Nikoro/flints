@@ -27,7 +27,7 @@ class Center extends Widget {}
     super.setUp();
   }
 
-  Future<void> test_alignmentCenter() async {
+  Future<void> test_alignment_center() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -51,7 +51,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_noAlignment() async {
+  Future<void> test_no_alignment() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -63,7 +63,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_validAlignment() async {
+  Future<void> test_valid_alignment() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 Widget f() {

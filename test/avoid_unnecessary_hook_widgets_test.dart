@@ -34,7 +34,7 @@ class HookBuilder extends Widget {
     super.setUp();
   }
 
-  Future<void> test_hookWidgetWithoutHooks() async {
+  Future<void> test_hook_widget_without_hooks() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -50,7 +50,7 @@ class MyWidget extends HookWidget {
     );
   }
 
-  Future<void> test_hookWidgetWithHooks() async {
+  Future<void> test_hook_widget_with_hooks() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -64,7 +64,7 @@ class MyWidget extends HookWidget {
 ''');
   }
 
-  Future<void> test_hookWidgetWithUseMemoized() async {
+  Future<void> test_hook_widget_with_use_memoized() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -78,7 +78,7 @@ class MyWidget extends HookWidget {
 ''');
   }
 
-  Future<void> test_statelessWidget() async {
+  Future<void> test_stateless_widget() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 class MyWidget extends StatelessWidget {
@@ -90,7 +90,7 @@ class MyWidget extends StatelessWidget {
 ''');
   }
 
-  Future<void> test_hookBuilderWithoutHooks() async {
+  Future<void> test_hook_builder_without_hooks() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -105,7 +105,7 @@ Widget f() {
     );
   }
 
-  Future<void> test_hookBuilderWithHooks() async {
+  Future<void> test_hook_builder_with_hooks() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';

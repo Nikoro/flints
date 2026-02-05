@@ -17,7 +17,7 @@ class Bloc<Event, State> {}
     super.setUp();
   }
 
-  Future<void> test_missingBlocSuffix() async {
+  Future<void> test_missing_bloc_suffix() async {
     await assertDiagnostics(
       r'''
 import 'package:bloc/bloc.dart';
@@ -27,14 +27,14 @@ class Counter extends Bloc<String, int> {}
     );
   }
 
-  Future<void> test_hasBlocSuffix() async {
+  Future<void> test_has_bloc_suffix() async {
     await assertNoDiagnostics(r'''
 import 'package:bloc/bloc.dart';
 class CounterBloc extends Bloc<String, int> {}
 ''');
   }
 
-  Future<void> test_notABloc() async {
+  Future<void> test_not_a_bloc() async {
     await assertNoDiagnostics(r'''
 class Counter {}
 ''');

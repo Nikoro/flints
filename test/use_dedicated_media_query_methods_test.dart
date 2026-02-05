@@ -52,7 +52,7 @@ class MediaQuery {
     super.setUp();
   }
 
-  Future<void> test_mediaQueryOfSize() async {
+  Future<void> test_media_query_of_size() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -64,7 +64,7 @@ void f(BuildContext context) {
     );
   }
 
-  Future<void> test_mediaQueryOfOrientation() async {
+  Future<void> test_media_query_of_orientation() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -76,7 +76,7 @@ void f(BuildContext context) {
     );
   }
 
-  Future<void> test_mediaQueryMaybeOfSize() async {
+  Future<void> test_media_query_maybe_of_size() async {
     await assertDiagnostics(
       r'''
 import 'package:flutter/widgets.dart';
@@ -88,7 +88,7 @@ void f(BuildContext context) {
     );
   }
 
-  Future<void> test_mediaQuerySizeOf() async {
+  Future<void> test_media_query_size_of() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 void f(BuildContext context) {
@@ -97,7 +97,7 @@ void f(BuildContext context) {
 ''');
   }
 
-  Future<void> test_mediaQueryOfAssignedToVariable() async {
+  Future<void> test_media_query_of_assigned_to_variable() async {
     await assertNoDiagnostics(r'''
 import 'package:flutter/widgets.dart';
 void f(BuildContext context) {

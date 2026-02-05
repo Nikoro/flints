@@ -17,7 +17,7 @@ class Notifier<State> {}
     super.setUp();
   }
 
-  Future<void> test_missingNotifierSuffix() async {
+  Future<void> test_missing_notifier_suffix() async {
     await assertDiagnostics(
       r'''
 import 'package:riverpod/riverpod.dart';
@@ -27,14 +27,14 @@ class Counter extends Notifier<int> {}
     );
   }
 
-  Future<void> test_hasNotifierSuffix() async {
+  Future<void> test_has_notifier_suffix() async {
     await assertNoDiagnostics(r'''
 import 'package:riverpod/riverpod.dart';
 class CounterNotifier extends Notifier<int> {}
 ''');
   }
 
-  Future<void> test_notANotifier() async {
+  Future<void> test_not_a_notifier() async {
     await assertNoDiagnostics(r'''
 class Counter {}
 ''');
