@@ -1,4 +1,9 @@
 {
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:dcm.dev)"
+    ]
+  },
   "hooks": {
     "PostToolUse": [
       {
